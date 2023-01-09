@@ -1,0 +1,140 @@
+@use './partials/global' as *;
+
+
+.wallpaper_size {
+  min-width: 180px;
+  max-width: 200px;
+  min-height: 130px;
+  max-height: 150px;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Open Sans Light';
+}
+
+.coffee-wallpaper {
+  background: url("../assets/coffee-circle.jpg");
+  background-size: cover;
+  background-position: center;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  min-height: 575px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.coffee-wallpaper__title {
+  @extend .wallpaper_size;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 40px;
+  position: relative;
+
+  &:before {
+    @extend .wallpaper_size;
+    border: 3px solid $pcolor-nitro-blue;
+    content: '';
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::after {
+    background-color: $ncolor-graphite;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+  }
+}
+
+.products {
+  background-color: $ncolor-graphite;
+  color: $ncolor-white;
+
+  &__list {
+    list-style-type: none;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    padding: 0.79em;
+    margin: auto;
+
+    span {
+      color: $pcolor-nitro-blue;
+      font-weight: bold;
+    }
+
+  }
+}
+
+
+main {
+  h2 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+
+
+.nitro-pink-bg {
+  background-color: $pcolor-nitro-pink;
+  padding-bottom: 1rem;
+
+  h2 {
+    font-size: 33px;
+    margin: 0;
+    padding-top: 1rem;
+  }
+}
+
+.nitro-gray-bg {
+  background-color: $ncolor-light_gray;
+  padding-bottom: 1rem;
+
+  h2 {
+    font-size: 33px;
+    margin: 0;
+    padding-top: 1rem;
+  }
+}
+
+.italic {
+  font-style: italic;
+  text-align: center;
+  word-wrap: break-word;
+  width: 25rem;
+  margin: auto;
+  font-weight: 400;
+}
+
+.price {
+  text-align: center;
+  color: $pcolor-nitro-blue;
+}
